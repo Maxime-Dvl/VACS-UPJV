@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Entity\UserRole;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -24,6 +25,9 @@ class RegistrationController extends AbstractController
     public function index(Request $request)
     {
         $user = new User();
+        $userRole = new UserRole();
+
+        $userRole = $this->getDoctrine()->getRepository(UserRole::class)->find(1); 
 
         $form = $this->createForm(UserType::class, $user);
 
@@ -34,7 +38,9 @@ class RegistrationController extends AbstractController
             $user->setPassword($this->passwordEncoder->encodePassword($user, $user->getPassword()));
 
             // Set their role
-            $user->setRoles(['ROLE_USER']);
+            $user->setRoles(['']);
+
+            $user->setUserRole($userRole);
 
             // Save
             $em = $this->getDoctrine()->getManager();
