@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /:
     path: /
     controller: App\Controller\SecurityController::login
+=======
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba

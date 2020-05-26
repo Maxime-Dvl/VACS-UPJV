@@ -13,6 +13,7 @@ title %}Log in!{% endblock %} {% block body %}
               </div>
               {% endif %} {% if app.user %}
               <div class="mb-3">
+<<<<<<< HEAD
                 Vous êtes connecté en tant que {{ app.user.username }},
                 <a href="{{ path('app_logout') }}">Déconnexion</a>
               </div>
@@ -21,6 +22,16 @@ title %}Log in!{% endblock %} {% block body %}
               <div class="form-group">
                 <label for="email" class="col-md-4 control-label"
                   >E-Mail</label
+=======
+                You are logged in as {{ app.user.username }},
+                <a href="{{ path('app_logout') }}">Logout</a>
+              </div>
+              {% endif %}
+              <div class="card-header mb-3">Please sign in</div>
+              <div class="form-group">
+                <label for="email" class="col-md-4 control-label"
+                  >E-Mail Address</label
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
                 >
                 <div class="col-md-12">
                   <input
@@ -36,7 +47,11 @@ title %}Log in!{% endblock %} {% block body %}
               </div>
               <div class="form-group">
                 <label for="password" class="col-md-4 control-label"
+<<<<<<< HEAD
                   >Mot de passe</label
+=======
+                  >Password</label
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
                 >
                 <div class="col-md-12">
                   <input
@@ -56,7 +71,11 @@ title %}Log in!{% endblock %} {% block body %}
               <div class="form-group">
                 <div class="col-md-12">
                   <button type="submit" class="btn btn-primary">
+<<<<<<< HEAD
                     <i class="fa fa-btn fa-sign-in"></i> Connexion
+=======
+                    <i class="fa fa-btn fa-sign-in"></i> Login
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
                   </button>
                 </div>
               </div>

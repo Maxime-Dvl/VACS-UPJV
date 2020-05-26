@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Entity;
+<<<<<<< HEAD
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+=======
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 /**
@@ -38,6 +41,7 @@ class User implements UserInterface
      */
     private $name;
 
+<<<<<<< HEAD
     /**
      * @ORM\ManyToOne(targetEntity=UserRole::class, inversedBy="Users")
      * @ORM\JoinColumn(nullable=false)
@@ -60,6 +64,8 @@ class User implements UserInterface
         $this->candidatures = new ArrayCollection();
     }
 
+=======
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
     public function getId(): ?int
     {
         return $this->id;
@@ -144,6 +150,7 @@ class User implements UserInterface
         $this->name = $name;
         return $this;
     }
+<<<<<<< HEAD
 
     public function getUserRole(): ?UserRole
     {
@@ -218,4 +225,6 @@ class User implements UserInterface
 
         return $this;
     }
+=======
+>>>>>>> 7a5001febfbb4c07fdbe25553eb2082fc72b7cba
 }
